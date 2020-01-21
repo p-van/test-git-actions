@@ -20,6 +20,8 @@ jobs:
       run: ls -la
     - name: build-dotnet
       run: dotnet build WebApplication/WebApplication.sln
+    - name: run-test
+      run: dotnet test WebApplication/WebApplication.sln
 
   build_dotnet:
     name: Build DotnetCore app
