@@ -21,7 +21,7 @@ jobs:
     - name: build-dotnet
       run: dotnet build WebApplication/WebApplication.sln
     - name: run-test
-      run: dotnet test WebApplication/WebApplication.sln
+      run: dotnet test WebApplication/WebApplication.sln --nologo
 
   build_dotnet:
     name: Build DotnetCore app
