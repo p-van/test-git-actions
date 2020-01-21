@@ -11,10 +11,7 @@ jobs:
       with:
         clean: 'true'
 
-    - name: print-greeting
-      env:
-        MY_VAR: Hi there! My name is
-        FOO: nuget bar 
+    - name: print-directory 
       run: |
         ls -la
 
@@ -29,6 +26,9 @@ jobs:
         FOO: dotnet bar
       run: |
         echo $MY_VAR $FOO.
+    - name: print-directory
+      run: |
+        ls -la
     
 
 
