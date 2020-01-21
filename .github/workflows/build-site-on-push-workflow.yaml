@@ -1,0 +1,29 @@
+name: Test Site Build
+on: [push]
+
+jobs:
+  build_nuget:
+    name: Build Node App
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FOO: nuget bar 
+      run: |
+        echo $MY_VAR $FOO.
+
+  build_dotnet:
+    name: Build DotnetCore app
+    runs-on: ubuntu-latest
+    needs: build_nuget
+    steps:
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FOO: dotnet bar
+      run: |
+        echo $MY_VAR $FOO.
+    
+
+
