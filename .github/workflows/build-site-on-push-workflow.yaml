@@ -23,7 +23,13 @@ jobs:
 
     - name: print-directory 
       run: ls -la
-      
+
+    - name: npm-install
+      run: npm install --prefix ./WebApplication/WebApplication/Client
+
+    - name: npm-build
+      run: npm run --prefix ./WebApplication/WebApplication/Client build
+
     - name: build-dotnet
       run: dotnet build WebApplication/WebApplication.sln --nologo
 
