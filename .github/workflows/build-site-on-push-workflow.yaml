@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: setup-dotnet
-    - uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.100'
       
     - name: checkout-repo
       uses: actions/checkout@v2
@@ -15,10 +17,7 @@ jobs:
         clean: 'true'
 
     - name: print-directory 
-      run: |
-        ls -la
-    - name: print-dotnet-version
-      run: dotnet --list-sdks
+      run: ls -la
 
   build_dotnet:
     name: Build DotnetCore app
