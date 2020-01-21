@@ -18,6 +18,34 @@
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\dist\jquery.min.js" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\dist\jquery.min.map" />
       <_ContentIncludedByDefault Remove="wwwroot\lib\jquery\LICENSE.txt" />
+      <_ContentIncludedByDefault Remove="Client\angular.json" />
+      <_ContentIncludedByDefault Remove="Client\e2e\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="Client\package-lock.json" />
+      <_ContentIncludedByDefault Remove="Client\package.json" />
+      <_ContentIncludedByDefault Remove="Client\tsconfig.app.json" />
+      <_ContentIncludedByDefault Remove="Client\tsconfig.json" />
+      <_ContentIncludedByDefault Remove="Client\tsconfig.spec.json" />
+      <_ContentIncludedByDefault Remove="Client\tslint.json" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Remove="Client\**" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Client\**" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <None Remove="Client\**" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Content Remove="Client\**" />
     </ItemGroup>
 
 </Project>

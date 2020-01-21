@@ -18,8 +18,10 @@ jobs:
 
     - name: print-directory 
       run: ls -la
+      
     - name: build-dotnet
-      run: dotnet build WebApplication/WebApplication.sln
+      run: dotnet build WebApplication/WebApplication.sln --nologo
+
     - name: run-test
       run: dotnet test WebApplication/WebApplication.sln --nologo
 
