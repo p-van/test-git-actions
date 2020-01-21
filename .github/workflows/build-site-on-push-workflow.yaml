@@ -18,6 +18,8 @@ jobs:
 
     - name: print-directory 
       run: ls -la
+    - name: build-dotnet
+      run: dotnet build WebApplication/WebApplication.sln
 
   build_dotnet:
     name: Build DotnetCore app
