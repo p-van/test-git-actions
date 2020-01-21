@@ -11,7 +11,7 @@ jobs:
         MY_VAR: Hi there! My name is
         FOO: nuget bar 
       run: |
-        echo $MY_VAR $FOO.
+        ls -la
 
   build_dotnet:
     name: Build DotnetCore app
