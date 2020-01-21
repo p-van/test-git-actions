@@ -6,6 +6,9 @@ jobs:
     name: Build Node App
     runs-on: ubuntu-latest
     steps:
+    - name: setup-dotnet
+    - uses: actions/setup-dotnet@v1
+      
     - name: checkout-repo
       uses: actions/checkout@v2
       with:
@@ -14,6 +17,8 @@ jobs:
     - name: print-directory 
       run: |
         ls -la
+    - name: print-dotnet-version
+      run: dotnet --list-sdks
 
   build_dotnet:
     name: Build DotnetCore app
