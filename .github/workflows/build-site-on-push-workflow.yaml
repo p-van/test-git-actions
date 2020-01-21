@@ -6,7 +6,12 @@ jobs:
     name: Build Node App
     runs-on: ubuntu-latest
     steps:
-    - name: Print a greeting
+    - name: checkout-repo
+      uses: actions/checkout@v2
+      with:
+        clean: 'true'
+
+    - name: print-greeting
       env:
         MY_VAR: Hi there! My name is
         FOO: nuget bar 
@@ -18,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: build_nuget
     steps:
-    - name: Print a greeting
+    - name: print-greeting
       env:
         MY_VAR: Hi there! My name is
         FOO: dotnet bar
